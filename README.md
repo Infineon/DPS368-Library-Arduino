@@ -1,6 +1,6 @@
 # DPS368-Digital-Pressure-Sensor
 
-<img src="https://www.infineon.com/export/sites/default/media/products/Small_Signal_Discretes/lowres-DPS368_VLGA-8-2_Combi.tif.png_1864837327.png" width=150><img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS368-Pressure-Shield2Go_Top.png" width=300>
+<img src="https://www.infineon.com/export/sites/default/media/products/Small_Signal_Discretes/lowres-DPS368_VLGA-8-2_Combi.tif.png_1864837327.png" width=150><img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS368-Pressure-Shield2Go_Top.jpg" width=300>
 
 Library of Infineon's highly sensitive [DPS368 sensor](https://www.infineon.com/cms/en/product/sensor/barometric-pressure-sensor-for-consumer-applications/dps368/) for Arduino.
 
