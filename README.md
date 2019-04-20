@@ -1,70 +1,74 @@
-# DPS310-Digital-Pressure-Sensor
+# DPS368-Digital-Pressure-Sensor
 
-[![Build Status](https://travis-ci.org/Infineon/DPS310-Pressure-Sensor.svg?branch=master)](https://travis-ci.org/Infineon/DPS310-Pressure-Sensor)
+<img src="https://www.infineon.com/export/sites/default/media/products/Small_Signal_Discretes/lowres-DPS368_VLGA-8-2_Combi.tif.png_1864837327.png" width=150><img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS368-Pressure-Shield2Go_Top.png" width=300>
 
-<img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS310_PP.jpg" width=150><img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS310-Pressure-Shield2Go_Top.png" width=300>
-
-Library of Infineon's highly sensitive [DPS310 sensor](https://www.infineon.com/cms/de/product/sensor/capacitive-pressure-sensor-for-consumer-applications/DPS310/productType.html?productType=5546d462525dbac4015312b96a743801) for Arduino.
+Library of Infineon's highly sensitive [DPS368 sensor](https://www.infineon.com/cms/en/product/sensor/barometric-pressure-sensor-for-consumer-applications/dps368/) for Arduino.
 
 ## Summary
 
-The [DPS310](https://www.infineon.com/dgdl/Infineon-DPS310-DS-v01_00-EN.pdf?fileId=5546d462576f34750157750826c42242) is a miniaturized digital barometric air pressure sensor with a high accuracy and a low current consumption, capable of measuring both pressure and temperature. The internal signal processor converts the output from the pressure and temperature sensor elements to 24 bit results. Each unit is individually calibrated, the calibration coefficients calculated during this process are stored in the calibration registers. The available raw data of the sensor can be calibrated by using the pre-calibrated coefficients as they are used in the application to convert the measurement results to high accuracy pressure and temperature values.
+The [DPS368](https://www.infineon.com/cms/en/product/sensor/barometric-pressure-sensor-for-consumer-applications/dps368/) is a miniaturized digital barometric air pressure sensor with ultra-high precision (±2 cm) and a low current consumption, capable of measuring both pressure and temperature. Due to its robust package, it can withstand 50 m under water for one hour (IPx8). The pressure sensor element is based on a capacitive sensing principle which guarantees high precision during temperature changes. The small package (2.0 x 2.5 x 1.1 mm³) makes the DPS368 ideal for mobile applications and wearable devices. 
 
-Sensor measurements and calibration coefficients are available through the serial I2C or SPI interface.
+### Summary of Features:
 
-## Key Features and Applications
-* Supply voltage range 1.7V to 3.6V
-* Operation range 300hPa – 1200hPa
-* Sensor’s precision 0.005hPa
-* Relative accuracy ±0.06hPa
-* Pressure temperature sensitivity of 0.5Pa/K
-* Temperature accuracy  ±0.5C°
-* Applications
-  * Wearable applications, sport and fitness activities tracking
-  * Drones automatic pilot, fix point flying
-  * Indoor navigation, altitude metering
+* Package dimensions: 8-pin LGA, 2.0 x 2.5 x 1.1 mm³
+* Operation range:
+ * Pressure: 300–1200 hPa
+ * Temperature: -40–85°C
+* Precision: ± 0.002 hPa (or ±0.02 m)
+* Rel. accuracy: ± 0.06 hPa (or ±0.5 m)
+* Abs. accuracy: ± 1 hPa (or ±8 m)
+* Temperature accuracy: ± 0.5°C
+* Avg. current consumption: 1.7 µA (pressure measurement@1 Hz sampling rate, standby: 0.5 µA)
+* Integrated FIFO
+* Interface: I2C and SPI (both with optional interrupt)
+
+### Benefits
+
+* Fast, ultra-low noise read-out allows for precise measurement of altitude, air flow and body movements
+* Small package size ideal for wearable devices & mobile applications
+* Sensor can be used in harsh environment (water, dust & humidity)
+* Environmentally resistant package facilitates handling in assembly line
+
+### Target Applications
+
+* Smart watches & wearables (e.g. fitness tracking)
+* Smart phone (e.g. navigation)
+* Home appliances (e.g. air flow control)
+* Drones (e.g. flight stability)
 
 ## Installation
 
 ### Integration of Library
 
-Please download this repository from GitHub by clicking on the following field in the latest [release](https://github.com/Infineon/DPS310-Pressure-Sensor/releases) of this repository:
+The master branch is always release ready; therefore, you can just download this library by downloading it from GitHub directly:
 
-![Download Library](https://raw.githubusercontent.com/infineon/assets/master/Pictures/Releases_Generic.jpg)
+Please download this repository from GitHub by clicking on the above button `Clone or download` of this repository:
 
-To install the DPS310 pressure sensor library in the Arduino IDE, please go now to **Sketch** > **Include Library** > **Add .ZIP Library...** in the Arduino IDE and navigate to the downloaded .ZIP file of this repository. The library will be installed in your Arduino sketch folder in libraries and you can select as well as include this one to your project under **Sketch** > **Include Library** > **DPS310**.
+![Download Library](https://github.com/Infineon/Assets/blob/master/Pictures/Download_Repo.png)
+
+To install the DPS368 pressure sensor library in the Arduino IDE, please go now to **Sketch** > **Include Library** > **Add .ZIP Library...** in the Arduino IDE and navigate to the downloaded .ZIP file of this repository. The library will be installed in your Arduino sketch folder in libraries and you can select as well as include this one to your project under **Sketch** > **Include Library** > **DPS368 Barometric Pressure Sensor**.
 
 ![Install Library](https://raw.githubusercontent.com/infineon/assets/master/Pictures/Library_Install_ZIP.png)
 
 ## Usage
 Please see the example sketches in the `/examples` directory in this library to learn more about the usage of the library. Especially, take care of the respective SPI and I²C configuration of the sensor. 
-For more information, please consult the datasheet [here](https://www.infineon.com/dgdl/Infineon-DPS310-DS-v01_00-EN.pdf?fileId=5546d462576f34750157750826c42242).
+For more information, please consult the datasheet [here](https://www.infineon.com/dgdl/Infineon-DPS368-DS-v01_00-EN.pdf?fileId=5546d46269e1c019016a0c45105d4b40).
 
-Currently, there exists the DPS310 Pressure Shield2Go evaluation board as a break out board:
+Currently, there exists the DPS368 Pressure Shield2Go evaluation board as a break out board:
 
-* [DPS310 Pressure Shield2Go](https://www.infineon.com/cms/de/product/evaluation-boards/s2go-pressure-dps310/)
+* [DPS368 Pressure Shield2Go](https://www.infineon.com/cms/en/product/evaluation-boards/s2go-pressure-dps368)
 
-### DPS310 Pressure Shield2Go
-The DPS310 Pressure Shield2Go is a standalone break out board with Infineon's Shield2Go formfactor and pin out. You can connect it easily to any microcontroller of your choice which is Arduino compatible and has 3.3 V logic level (please note that the Arduino UNO has 5 V logic level and cannot be used without level shifting).
-Please consult the [wiki](https://github.com/Infineon/DPS310-Pressure-Sensor/wiki) for additional details about the board.
+### DPS368 Pressure Shield2Go
+The DPS368 Pressure Shield2Go is a standalone break out board with Infineon's Shield2Go formfactor and pin out. You can connect it easily to any microcontroller of your choice which is Arduino compatible and has 3.3 V logic level (please note that the Arduino UNO has 5 V logic level and cannot be used without level shifting).
+Please consult the [wiki](https://github.com/Infineon/DPS368-Library-Arduino/wiki) for additional details about the board.
 
-Each sensor can only work either SPI or I2C. To convert from SPI to I2C, for example, you have to re-solder the resistors on the Shield2Go. Please take care that every Shield2Go for the DPS310 is shipped as I2C configuration right now.
+Each sensor can only work either SPI or I2C. To convert from SPI to I2C, for example, you have to re-solder the resistors on the Shield2Go. Please take care that every Shield2Go for the DPS368 is shipped as I2C configuration right now.
 
-* [Link](https://github.com/Infineon/DPS310-Pressure-Sensor/wiki) to the wiki with more information
+* [Link](https://github.com/Infineon/DPS368-Library-Arduino/wiki) to the wiki with more information
 
-However, every Shield2Go is directly compatible with Infineon's XMC2Go and the recommended quick start is to use an XMC2Go for evaluation. Therefore, please install (if not already done) also the [XMC-for-Arduino](https://github.com/Infineon/XMC-for-Arduino) implementation and choose afterwards **XMC1100 XMC2Go** from the **Tools**>**Board** menu in the Arduino IDE if working with this evaluation board. To use it, please plug the DPS310 Pressure Shield2Go onto the XMC2Go as shown below.
+However, every Shield2Go is directly compatible with Infineon's XMC2Go and the recommended quick start is to use an XMC2Go for evaluation. Therefore, please install (if not already done) also the [XMC-for-Arduino](https://github.com/Infineon/XMC-for-Arduino) implementation and choose afterwards **XMC1100 XMC2Go** from the **Tools**>**Board** menu in the Arduino IDE if working with this evaluation board. To use it, please plug the DPS368 Pressure Shield2Go onto the XMC2Go as shown below.
 
-<img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS310_S2Go_w_XMC2Go.png" width=250>
-
-## Known Issues
-
-### Temperature Measurement Issue
-There could be a problem with temperature measurement of the DPS310. If your DPS310 indicates a temperature around 60 °C although you expect around room temperature, e.g. 20 °C, please call the function correctTemp() as included in the library to fix this issue.
-
-In case you need additional help, please do not hesitate to open an issue in this repository.
-
-### Interrupt mode
-Interrupt mode not working reliably on XMC2Go for DPS310 right now.
+<img src="https://github.com/Infineon/Assets/blob/master/Pictures/DPS368_S2Go_w_XMC2Go.jpg" width=250>
 
 ### Additional Information
-Please find the datasheet of the DPS310 [here](https://www.infineon.com/dgdl/Infineon-DPS310-DS-v01_00-EN.pdf?fileId=5546d462576f34750157750826c42242). It depends on the evaluation board which you are using or the respective configuration of the sensor on your PCB which communication protocol as well as addresses you need to use for communicating with the sensor.
+Please find the datasheet of the DPS368 [here](https://www.infineon.com/dgdl/Infineon-DPS368-DS-v01_00-EN.pdf?fileId=5546d46269e1c019016a0c45105d4b40). It depends on the evaluation board which you are using or the respective configuration of the sensor on your PCB which communication protocol as well as addresses you need to use for communicating with the sensor.
