@@ -1,3 +1,7 @@
+# ATTENTION:
+This library is deprecated and will not be maintained any longer.
+Please use the [XENSIV™ Digital Pressure Sensor Arduino Library](https://github.com/Infineon/arduino-xensiv-dps3xx)
+
 # DPS368 Barometric Pressure Sensor 
 
 [![Build Status](https://travis-ci.org/Infineon/DPS368-Library-Arduino.svg?branch=dps368)](https://travis-ci.org/Infineon/DPS368-Library-Arduino)
